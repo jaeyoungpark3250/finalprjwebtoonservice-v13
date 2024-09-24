@@ -12,6 +12,12 @@ public class PurchaseHateoasProcessor
 
     @Override
     public EntityModel<Purchase> process(EntityModel<Purchase> model) {
+        model.add(
+            Link
+                .of(model.getRequiredLink("self").getHref() + "//buywebtoon")
+                .withRel("/buywebtoon")
+        );
+
         return model;
     }
 }

@@ -1,7 +1,6 @@
 package finalprjwebtoonservicev.domain;
 
 import finalprjwebtoonservicev.PurchaseserviceApplication;
-import finalprjwebtoonservicev.domain.BuyComplete;
 import finalprjwebtoonservicev.domain.BuyFailed;
 import finalprjwebtoonservicev.domain.CancelComplete;
 import finalprjwebtoonservicev.domain.CancelFailed;
@@ -35,9 +34,6 @@ public class Purchase {
 
     @PostPersist
     public void onPostPersist() {
-        BuyComplete buyComplete = new BuyComplete(this);
-        buyComplete.publishAfterCommit();
-
         BuyFailed buyFailed = new BuyFailed(this);
         buyFailed.publishAfterCommit();
 
@@ -58,6 +54,9 @@ public class Purchase {
         cancelFailed.publishAfterCommit();
     }
 
+    @PreRemove
+    public void onPreRemove() {}
+
     public static PurchaseRepository repository() {
         PurchaseRepository purchaseRepository = PurchaseserviceApplication.applicationContext.getBean(
             PurchaseRepository.class
@@ -65,6 +64,7 @@ public class Purchase {
         return purchaseRepository;
     }
 
+    //<<< Clean Arch / Port Method
     public void buyWebtoon() {
         //implement business logic here:
 
@@ -72,6 +72,7 @@ public class Purchase {
         buyComplete.publishAfterCommit();
     }
 
+    //>>> Clean Arch / Port Method
     public void cancelWebtoon() {
         //implement business logic here:
 
