@@ -17,15 +17,11 @@ spec:
       containers:
         - name: historyservice
           image: "jypking/historyservice:20240924"
-          imagePullPolicy: Always
           ports:
             - containerPort: 8080
-          env:
-          - name: CLASS
-            valueFrom:
-              configMapKeyRef:
-                name: my-config
-                key: class
+          resources:
+            requests:
+              cpu: "200m"            
           readinessProbe:
             httpGet:
               path: '/actuator/health'

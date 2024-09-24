@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: historyservice
+  labels:
+    app: historyservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: historyservice
+  template:
+    metadata:
+      labels:
+        app: historyservice
+    spec:
+      containers:
+        - name: historyservice
+          image: "jypking/historyservice:20240924"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

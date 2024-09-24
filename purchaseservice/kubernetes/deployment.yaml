@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: purchaseservice
-          image: "username/purchaseservice:latest"
+          image: "jypking/purchaseservice:20240924"
           ports:
             - containerPort: 8080
           readinessProbe:

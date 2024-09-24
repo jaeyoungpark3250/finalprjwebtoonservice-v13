@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webtoonmanagementservice
-          image: "username/webtoonmanagementservice:latest"
+          image: "jypking/webtoonmanagementservice:20240924"
           ports:
             - containerPort: 8080
           readinessProbe:
