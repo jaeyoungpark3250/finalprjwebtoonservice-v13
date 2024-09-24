@@ -1,0 +1,285 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pointerservice
+  labels:
+    app: pointerservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pointerservice
+  template:
+    metadata:
+      labels:
+        app: pointerservice
+    spec:
+      containers:
+        - name: pointerservice
+          image: username/pointerservice:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paymentservice
+  labels:
+    app: paymentservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paymentservice
+  template:
+    metadata:
+      labels:
+        app: paymentservice
+    spec:
+      containers:
+        - name: paymentservice
+          image: username/paymentservice:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: historyservice
+  labels:
+    app: historyservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: historyservice
+  template:
+    metadata:
+      labels:
+        app: historyservice
+    spec:
+      containers:
+        - name: historyservice
+          image: username/historyservice:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webtoonmanagementservice
+  labels:
+    app: webtoonmanagementservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webtoonmanagementservice
+  template:
+    metadata:
+      labels:
+        app: webtoonmanagementservice
+    spec:
+      containers:
+        - name: webtoonmanagementservice
+          image: username/webtoonmanagementservice:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: purchaseservice
+  labels:
+    app: purchaseservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: purchaseservice
+  template:
+    metadata:
+      labels:
+        app: purchaseservice
+    spec:
+      containers:
+        - name: purchaseservice
+          image: username/purchaseservice:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: pointerservice
+  labels:
+    app: pointerservice
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: pointerservice
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: paymentservice
+  labels:
+    app: paymentservice
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: paymentservice
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: historyservice
+  labels:
+    app: historyservice
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: historyservice
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webtoonmanagementservice
+  labels:
+    app: webtoonmanagementservice
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: webtoonmanagementservice
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: purchaseservice
+  labels:
+    app: purchaseservice
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: purchaseservice
+
