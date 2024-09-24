@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: purchaseservice
-          image: "jypking/purchaseservice:20240924"
+          image: "user11.azurecr.io/purchaseservice:20240924"
           ports:
             - containerPort: 8080
           readinessProbe:
