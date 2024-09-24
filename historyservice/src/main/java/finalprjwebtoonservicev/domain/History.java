@@ -328,7 +328,27 @@ public class History {
     //<<< Clean Arch / Port Method
     public static void userInfoCheck(CancelComplete cancelComplete) {
         //implement business logic here:
+        System.out.println("============================================================userInfoCheck============================================================");
+        //implement business logic here:
+        repository().findById(cancelComplete.getUserId()).ifPresent(history->{
+           
+            if(history.getMyPoint() >= cancelComplete.getPoint()){
 
+                history.setMyPoint(history.getMyPoint() - cancelComplete.getPoint());
+                history.setStatus("buy success");
+                repository().save(history);
+
+                CheckCorrected checkCorrected = new CheckCorrected(history);
+                checkCorrected.publishAfterCommit();
+            } else {
+
+                history.setStatus("buy fail..");
+                repository().save(history);
+
+                CheckRejected checkRejected = new CheckRejected(history);
+                checkRejected.publishAfterCommit();
+            }          
+         });
         /** Example 1:  new item 
         History history = new History();
         repository().save(history);
