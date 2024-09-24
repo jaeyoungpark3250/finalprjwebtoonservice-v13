@@ -58,6 +58,9 @@ public class Purchase {
         cancelFailed.publishAfterCommit();
     }
 
+    @PreRemove
+    public void onPreRemove() {}
+
     public static PurchaseRepository repository() {
         PurchaseRepository purchaseRepository = PurchaseserviceApplication.applicationContext.getBean(
             PurchaseRepository.class
