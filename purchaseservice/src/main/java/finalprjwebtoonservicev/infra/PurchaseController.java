@@ -23,7 +23,7 @@ public class PurchaseController {
     @RequestMapping(value = "/purchases/buywebtoon",
             method = RequestMethod.POST,
             produces = "application/json;charset=UTF-8")
-    public Purchase buyWebtoon(HttpServletRequest request, HttpServletResponse response, 
+    public Purchase buyWebtoon(HttpServletRequest request, HttpServletResponse response 
         ) throws Exception {
             System.out.println("##### /purchase/buyWebtoon  called #####");
             Purchase purchase = new Purchase();
