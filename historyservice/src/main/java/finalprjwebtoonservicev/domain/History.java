@@ -276,6 +276,27 @@ public class History {
     public static void userInfoCheck(BuyComplete buyComplete) {
         //implement business logic here:
 
+        System.out.println("============================================================userInfoCheck============================================================");
+        //implement business logic here:
+        repository().findById(buyComplete.getId()).ifPresent(history->{
+           
+            if(history.getMyPoint() >= buyComplete.getPoint()){
+
+                history.setMyPoint(history.getMyPoint() - buyComplete.getPoint());
+                history.setStatus("buy success");
+                repository().save(history);
+
+                CheckCorrected checkCorrected = new CheckCorrected(history);
+                checkCorrected.publishAfterCommit();
+            } else {
+
+                history.setStatus("buy fail..");
+                repository().save(history);
+
+                CheckRejected checkRejected = new CheckRejected(history);
+                checkRejected.publishAfterCommit();
+            }          
+         });
         /** Example 1:  new item 
         History history = new History();
         repository().save(history);

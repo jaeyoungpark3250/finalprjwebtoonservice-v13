@@ -67,6 +67,7 @@ public class Purchase {
     //<<< Clean Arch / Port Method
     public void buyWebtoon() {
         //implement business logic here:
+        System.out.println("============================================================buyWebtoon============================================================");
 
         BuyComplete buyComplete = new BuyComplete(this);
         buyComplete.publishAfterCommit();
@@ -75,6 +76,8 @@ public class Purchase {
     //>>> Clean Arch / Port Method
     public void cancelWebtoon() {
         //implement business logic here:
+
+        System.out.println("============================================================cancelWebtoon============================================================");
 
         CancelComplete cancelComplete = new CancelComplete(this);
         cancelComplete.publishAfterCommit();

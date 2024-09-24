@@ -73,10 +73,10 @@ public class Pointer  {
         joind.publishAfterCommit();
         
         
-        finalprjwebtoonservicev.external.PointerQuery pointerQuery = new finalprjwebtoonservicev.external.PointerQuery();
-        PointerApplication.applicationContext
-            .getBean(finalprjwebtoonservicev.external.Service.class)
-            .( pointerQuery);
+        // finalprjwebtoonservicev.external.PointerQuery pointerQuery = new finalprjwebtoonservicev.external.PointerQuery();
+        // PointerApplication.applicationContext
+        //     .getBean(finalprjwebtoonservicev.external.Service.class)
+        //     .( pointerQuery);
     }
     public void withdraw(){
         //implement business logic here:
