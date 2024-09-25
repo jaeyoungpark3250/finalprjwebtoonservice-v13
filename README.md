@@ -19,6 +19,23 @@ www.msaez.io/#/48427782/storming/finalprjwebtoonservice-v13
 ![이벤트스토밍](https://github.com/user-attachments/assets/36aa9006-eaf3-4f3d-8731-e6dd125d932f)
 
 ## 분산 트랜잭션(PUB/SUB)
+##########################################################################################################
+KAFKA DATA 연동 후, 마이크로 서비스간의 통신에서 이벤트 메세지를 Pub/Sub 수행
+
+1. WEBTOON 서비스 전체 목록 확인
+![웹툰전체데이터확인](https://github.com/user-attachments/assets/fbdc5dc6-a94e-41e1-b249-43fd420eddde)
+
+2. 고객 WEBTOON 서비스 열람 수행
+![웹툰서비스등록](https://github.com/user-attachments/assets/a66a1a09-38c5-4e83-824c-b57eb5505b59)
+
+3. 해당 고객 WEBTOON 포인트 구매 후, 잔여 포인트 확인
+![히스토리내역확인](https://github.com/user-attachments/assets/7ccfdb08-1d4a-4c12-9cad-b6cde27790ca)
+
+##########################################################################################################
+
+## 단일 진입점(GATEWAY)
+
+
 
 
 
