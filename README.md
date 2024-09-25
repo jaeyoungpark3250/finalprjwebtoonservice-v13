@@ -3,7 +3,9 @@
 www.msaez.io/#/48427782/storming/finalprjwebtoonservice-v13
 
 ## MSA 아키텍처 구성도
-![MSA_architecture](https://github.com/user-attachments/assets/042c13d9-0686-4db3-a4d0-f63c5f682fa9)
+
+![MSA_architecture](https://github.com/user-attachments/assets/44cb7731-9e17-4b19-8239-48a8ff532570)
+
 
 1. Pointer Service - 고객의 포인트 충전/환불 등을 담당
 2. WebToon Service - 웹툰의 업로드/업데이트/읽음 요청을 담당
