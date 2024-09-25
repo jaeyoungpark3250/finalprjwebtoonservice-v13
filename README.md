@@ -2,9 +2,6 @@
 ## Model
 www.msaez.io/#/48427782/storming/finalprjwebtoonservice-v13
 
-## 클라우드 아키텍처 구성도
-![cloud_architecture_PJY](https://github.com/user-attachments/assets/3db43b49-5773-49b4-ae73-7b0a75d2e545)
-
 ## MSA 아키텍처 구성도
 ![MSA_architecture](https://github.com/user-attachments/assets/042c13d9-0686-4db3-a4d0-f63c5f682fa9)
 
@@ -175,7 +172,36 @@ CASE 2) 보상 처리 프로세스
 ## 셀프 힐링 / 무 정지 배포
 ##########################################################################################################
 
+CASE 1) 서비스 순단 시, 순단 현상 확인
 
+1. 순단 현상
+
+![중간순단현상](https://github.com/user-attachments/assets/a8d3ab58-0c58-47ad-8146-be155519d265)
+
+2. 결과 확인
+
+![순단 시 정지시간 발생](https://github.com/user-attachments/assets/3643128c-cd68-4ef7-b122-12b834c119e4)
+
+
+CASE 2) 무 정지 배포
+
+1. Liveness probe 확인
+
+![Liveness Probe 확인](https://github.com/user-attachments/assets/65c850fa-826e-4fbe-97d3-643133ecb371)
+
+2. 결과 확인(무 정지)
+
+![무정지배포_정지시간없음](https://github.com/user-attachments/assets/f7109e3a-74ed-4e29-92ed-f1496c05f24c)
+
+##########################################################################################################
+
+
+
+
+
+
+## 클라우드 아키텍처 구성도
+![cloud_architecture_PJY](https://github.com/user-attachments/assets/3db43b49-5773-49b4-ae73-7b0a75d2e545)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
