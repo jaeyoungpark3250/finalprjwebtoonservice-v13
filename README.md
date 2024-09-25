@@ -84,7 +84,22 @@ CASE 2) 보상 처리 프로세스
 ## CQRS
 ##########################################################################################################
 
+- 히스토리 서비스 내, 회원 가입/포인트 충전 등 시나리오에 Query 모델(Materialized View)을 설계
 
+[Read Model CRUD 상세설계]
+
+![histories_redis_model](https://github.com/user-attachments/assets/41f8a7dc-e8b4-4c6e-a745-bf3643e1cf33)
+
+
+1. 회원 정보 생성 후, userId/status 확인 - histories 조회
+
+![redis_DATA_신규회원CREATE](https://github.com/user-attachments/assets/a44d7b61-8f73-4308-b930-1972aa219399)
+
+2. 회원 포인트 충전 후, mypoint 정보 확인 - histories 조회
+
+![redis_DATA_포인트결제충전](https://github.com/user-attachments/assets/48285e73-475c-4dd0-96e3-a8a0519e942b)
+
+##########################################################################################################
 
 
 
