@@ -195,8 +195,39 @@ CASE 2) 무 정지 배포
 
 ##########################################################################################################
 
+## Service Mesh
+##########################################################################################################
 
+- istio system 이용한 kiali / keyclock 생성
 
+1. istio system 설치 확인
+
+![istio_system_설치확인](https://github.com/user-attachments/assets/3d91a1c0-8cd2-43a4-b361-5d62e944d2cb)
+
+2. kiali / keyclock 생성
+
+![kiali_접속](https://github.com/user-attachments/assets/da4c3f26-55f7-4e1b-9d03-d0d35f92ab2e)
+
+![keyclock생성확인](https://github.com/user-attachments/assets/db679486-f749-452b-a3d6-d1eafdfb5087)
+
+##########################################################################################################
+
+## 통합 모니터링
+##########################################################################################################
+
+- Loki 설치 및 Grafana 활용
+
+1. 로키 설치/구성
+
+![loki설치및구성](https://github.com/user-attachments/assets/dc98d7cf-5b7f-46c8-9207-c0390f24f015)
+
+![Loki_데이터소스_확인까지만](https://github.com/user-attachments/assets/f8a554c3-e62a-4849-bde6-ee9dff32392e)
+
+2. Grafana UI 연동
+
+![grafana_UI](https://github.com/user-attachments/assets/96e09d1f-db67-4493-ba33-54127fcd1b82)
+
+##########################################################################################################
 
 
 
