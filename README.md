@@ -1,7 +1,38 @@
 # 
-
 ## Model
 www.msaez.io/#/48427782/storming/finalprjwebtoonservice-v13
+
+## 클라우드 아키텍처 구성도
+
+## MSA 아키텍처 구성도
+![MSA_architecture](https://github.com/user-attachments/assets/042c13d9-0686-4db3-a4d0-f63c5f682fa9)
+
+1. Purchase Service - 고객의 결제/환불 요청을 담당
+2. WebToon Service - 웹툰의 업로드/삭제/읽음 요청을 담당
+3. User Service - 결제애 사용하는 포인트를 담당
+4. History Service - 웹툰의 결제 기록/소비 기록을 담당
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
