@@ -229,6 +229,66 @@ CASE 2) 무 정지 배포
 
 ##########################################################################################################
 
+## CI/CD
+##########################################################################################################
+
+1. Azure Jenkins 설치 및 azure credentials 발급
+
+![azure_shell_젠킨스설치확인](https://github.com/user-attachments/assets/cdce13a7-fc0e-4ac4-8143-e52e75ab1275)
+
+![azure credentials](https://github.com/user-attachments/assets/bf9f3e79-77cd-4e2f-a9a8-05c5b9c890b1)
+
+-----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----
+
+2. github 내 jenkins 파일 설정
+
+![github_jenkins_적용](https://github.com/user-attachments/assets/73a53172-8c56-4a5f-825f-ddd75cd42448)
+
+3. jenkins 빌드 수행
+
+![젠킨스초기화면](https://github.com/user-attachments/assets/af5c3035-57f5-4759-893b-0dcfd3d7f9ef)
+
+![젠킨스빌드서공](https://github.com/user-attachments/assets/f7aff918-e8e9-44ca-b942-f5c0ba9f9dc7)
+
+
 
 
 ## 클라우드 아키텍처 구성도
